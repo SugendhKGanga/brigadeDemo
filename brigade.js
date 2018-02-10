@@ -27,10 +27,10 @@ function JobRunner(g) {
     g.tasks = [
 		"git clone https://github.com/gajadevops/kubeDemo.git",
 		"cd kubeDemo",
-		"docker build -t sugendh_nodejs:10.1",
-		"docker tag sugendh_nodejs:10.1 sugendh/nodejs:10.1",
-		"docker login -u sugendh -p Password123",
-		"sudo docker push sugendh/nodejs:10.1"		
+		`docker build -t sugendh_nodejs:10.1`,
+		`docker tag sugendh_nodejs:10.1 sugendh/nodejs:10.1`,
+		`docker login -u sugendh -p Password123`,
+		`sudo docker push sugendh/nodejs:10.1`		
     ]
 }
 	
