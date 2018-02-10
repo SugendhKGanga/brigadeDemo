@@ -50,7 +50,7 @@ function JobTesting(x) {
 function JobDeployment(y) {
     // define job for build
     y.storage.enabled = false
-    y.image = "410602862282.dkr.ecr.us-east-2.amazonaws.com/demo-jenkins-pipeline:2.4"
+    y.image = "410602862282.dkr.ecr.us-east-2.amazonaws.com/demo-jenkins-pipeline:2.5"
     y.tasks = [
 		"cd /opt/",
 		"git clone https://github.com/gajadevops/kubeDemo.git"
