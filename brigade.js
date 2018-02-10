@@ -26,9 +26,10 @@ function JobRunner(g) {
     g.image = "sugendh/dockerindocker:1.0"
 	g.privileged = true
     g.tasks = [
-		"git clone https://github.com/gajadevops/kubeDemo.git",
-		"cd kubeDemo",
 		"dockerd-entrypoint.sh &",
+       		"echo waiting && sleep 40",
+		"git clone https://github.com/gajadevops/kubeDemo.git",
+                "cd kubeDemo",
 		`docker build -t sugendh_nodejs:10.1 .`,
 		`docker tag sugendh_nodejs:10.1 sugendh/nodejs:10.1`,
 		`docker login -u sugendh -p Password123`,
