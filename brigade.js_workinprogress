@@ -53,8 +53,8 @@ function JobDeployment(y) {
     y.image = "410602862282.dkr.ecr.us-east-2.amazonaws.com/demo-jenkins-pipeline:2.5"
     y.tasks = [
 		"cd /opt/",
-		"git clone https://github.com/SugendhKGanga/brigadeDemo.git",
-		"cd brigadeDemo",
-		`helm install --names nodjs-app ./helm/kubedemo`
+		"git clone https://github.com/gajadevops/kubeDemo.git"
+//		"cd kubeDemo",
+//		`helm install --namespace nodeapp --name my-app  ./helm/kubedemo`
     ]
 }	
