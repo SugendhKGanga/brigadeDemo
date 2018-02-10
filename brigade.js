@@ -55,6 +55,6 @@ function JobDeployment(y) {
 		"cd /opt/",
 		"git clone https://github.com/SugendhKGanga/brigadeDemo.git",
 		"cd brigadeDemo",
-		`helm install --names nodjs-app ./helm/kubedemo`
+		`helm install --name nodjs-app ./helm/kubedemo`
     ]
 }	
