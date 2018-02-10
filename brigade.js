@@ -18,7 +18,7 @@ events.on("push", function(e, project) {
     pipeline.add(testing)
 	pipeline.add(deployment)
 	pipeline.runEach()
-	
+})
 	
 function JobRunner(g) {
 // define job for build
