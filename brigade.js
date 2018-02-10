@@ -23,11 +23,9 @@ events.on("push", function(e, project) {
 function JobRunner(g) {
 // define job for build
     g.storage.enabled = false
-    g.image = "docker"
+    g.image = "sugendh/dockerindocker:1.0"
 	g.privileged = true
     g.tasks = [
-		"apk update",
-		"apk add git",
 		"git clone https://github.com/gajadevops/kubeDemo.git",
 		"cd kubeDemo",
 		"docker-entrypoint.sh &",
@@ -54,6 +52,6 @@ function JobDeployment(y) {
     y.image = "410602862282.dkr.ecr.us-east-2.amazonaws.com/demo-jenkins-pipeline:2.2"
     y.tasks = [
 		"cd /opt/charts",
-		"helm install --namespace jenkins --name my-jenkins-release -f stable/jenkins/values.yaml --set serviceType=LoadBalancer --set ImageTag=lts stable/jenkins"
+		`helm install --namespace jenkins --name my-jenkins-release -f stable/jenkins/values.yaml --set serviceType=LoadBalancer --set ImageTag=lts stable/jenkins`
     ]
 }	
