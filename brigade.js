@@ -25,7 +25,6 @@ function JobRunner(g) {
     g.storage.enabled = false
     g.image = "docker"
     g.tasks = [
-		"cd /opt/",
 		"git clone https://github.com/gajadevops/kubeDemo.git",
 		"cd kubeDemo",
 		"docker build -t sugendh_nodejs:10.1",
